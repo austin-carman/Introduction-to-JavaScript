@@ -295,9 +295,19 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter() {
-    
+function vowelCounter(word) {
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  let counter = 0;
+  word = word.toLowerCase();
+  for(let i =0; i <= word.length; i++) {
+    if(vowel.includes(word[i]))
+    counter++;
+  }
+  return counter;
 }
+console.log(vowelCounter('MISSISSIPPI'));
+
+
 
 
 
